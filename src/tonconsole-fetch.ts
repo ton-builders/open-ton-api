@@ -15,7 +15,6 @@ const ta = new TonApiClient({
 async function main() {
   // accounts();
   jetton();
-  // nft();
 }
 
 function accounts() {
@@ -27,17 +26,6 @@ function accounts() {
     .then((account) => {
       console.info(account);
     });
-}
-
-function nft() {
-  // NFT ==================================================
-  const collectionAddress = Address.parse(
-    "EQCZX4swSp6B6nar6oPa_dJ-XRkzS14Uw3249ltuO0CzKVDr",
-  );
-  ta.nft
-    .getNftCollection(collectionAddress)
-    .then((collection) => console.log("NFT Collection:", collection))
-    .catch((error) => console.error("Error fetching NFT collection:", error));
 }
 
 function jetton() {
