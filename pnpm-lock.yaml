@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@ton-api/client':
+        specifier: ^0.4.0
+        version: 0.4.0(@ton/core@0.61.0(@ton/crypto@3.3.0))
+      '@ton-api/ton-adapter':
+        specifier: ^0.4.1
+        version: 0.4.1(@ton-api/client@0.4.0(@ton/core@0.61.0(@ton/crypto@3.3.0)))(@ton/core@0.61.0(@ton/crypto@3.3.0))
       '@ton/core':
         specifier: ^0.61.0
         version: 0.61.0(@ton/crypto@3.3.0)
@@ -61,6 +67,17 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@ton-api/client@0.4.0':
+    resolution: {integrity: sha512-k3d6RzNWRDEZpVa9Gig2kHqp74tGvaK/imkjb08RIGxn+wKC7Yv5g98GnXEHf3srRkjtRCG0Nnjx8EsasOMJkw==}
+    peerDependencies:
+      '@ton/core': '>=0.59.0'
+
+  '@ton-api/ton-adapter@0.4.1':
+    resolution: {integrity: sha512-snvd49M2PnDiIgMyeeIpGPTWI7ECnRYz4qIcFplv/mmYvV+6OiNM4UtHOplAh7sGR1JY1xBf+HP+RJ8qzCN2Hw==}
+    peerDependencies:
+      '@ton-api/client': ^0.4.0
+      '@ton/core': '>=0.60.1'
 
   '@ton/core@0.61.0':
     resolution: {integrity: sha512-0qyVfP2dDue2bq80ydXggo2MlufcmzuFk6G94qRrZxvyQ3NSe4UeBTeRf1gQmN7tywgTsX2gS61e4yvJrlUu4Q==}
@@ -134,6 +151,9 @@ packages:
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
+
+  core-js-pure@3.45.0:
+    resolution: {integrity: sha512-OtwjqcDpY2X/eIIg1ol/n0y/X8A9foliaNt1dSK0gV3J2/zw+89FcNG3mPK+N8YWts4ZFUPxnrAzsxs/lf8yDA==}
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
@@ -330,6 +350,16 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@ton-api/client@0.4.0(@ton/core@0.61.0(@ton/crypto@3.3.0))':
+    dependencies:
+      '@ton/core': 0.61.0(@ton/crypto@3.3.0)
+      core-js-pure: 3.45.0
+
+  '@ton-api/ton-adapter@0.4.1(@ton-api/client@0.4.0(@ton/core@0.61.0(@ton/crypto@3.3.0)))(@ton/core@0.61.0(@ton/crypto@3.3.0))':
+    dependencies:
+      '@ton-api/client': 0.4.0(@ton/core@0.61.0(@ton/crypto@3.3.0))
+      '@ton/core': 0.61.0(@ton/crypto@3.3.0)
+
   '@ton/core@0.61.0(@ton/crypto@3.3.0)':
     dependencies:
       '@ton/crypto': 3.3.0
@@ -413,6 +443,8 @@ snapshots:
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
+
+  core-js-pure@3.45.0: {}
 
   create-require@1.1.1: {}
 

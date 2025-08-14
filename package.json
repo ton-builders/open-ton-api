@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
-    "start": "ts-node src/tonv2v3.ts",
+    "tonv2v3": "ts-node src/tonv2v3.ts",
+    "tonconsole": "ts-node src/tonconsole.ts",
     "addr": "ts-node src/addr.ts",
     "cell-encode": "ts-node src/cell-encode.ts",
     "cell-decode": "ts-node src/cell-decode.ts",
@@ -33,6 +33,8 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@ton-api/client": "^0.4.0",
+    "@ton-api/ton-adapter": "^0.4.1",
     "@ton/core": "^0.61.0",
     "@ton/crypto": "^3.3.0",
     "@ton/ton": "^15.3.1",
