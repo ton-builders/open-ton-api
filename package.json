@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/tonv2v3.ts",
+    "addr": "ts-node src/addr.ts",
+    "cell-encode": "ts-node src/cell-encode.ts",
+    "cell-decode": "ts-node src/cell-decode.ts",
+    "tx-msg": "ts-node src/get-TX-by-msgId.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "repository": {
     "type": "git",
@@ -26,7 +33,12 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@ton/core": "^0.61.0",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.3.1",
+    "buffer": "^6.0.3",
     "debug": "^4.4.1",
+    "dotenv": "^17.2.1",
     "node-fetch": "^3.3.2"
   }
 }
