@@ -75,7 +75,6 @@ async function main() {
 
   //https://testnet.toncenter.com/api/v3/index.html#/blockchain/api_v3_get_transactions_by_message
   // 参数 body_hash 设置为 bodyHashHex 或者 bodyHashBase64
-  // 备注：https://tonapi.io/ 没有看到提供 body_hash 的查询接口
   let bodyHashHex = msgBodyPayloadCell.hash().toString("hex");
   let bodyHashBase64 = msgBodyPayloadCell.hash().toString("base64");
   console.info("bodyHashHex = ", bodyHashHex); //body_hash
@@ -95,13 +94,12 @@ async function main() {
   let msgBuilderFunction = storeMessage(externalMessage);
   msgBuilderFunction(externalInMsgBuilder);
   let externalInMsgCell = externalInMsgBuilder.endCell();
+  let msgHashHex = externalInMsgCell.hash().toString("hex");
+  let msgHashBase64 = externalInMsgCell.hash().toString("base64");
+
   // API参考 1 https://testnet.toncenter.com/api/v3/index.html#/blockchain/api_v3_get_transactions_by_message
   // msg_hash 的参数设置为 msgHashHex 或 msgHashBase64 查询
 
-  // API参考 2 https://tonapi.io/api-v2#operations-Traces-getTrace
-  // trace_id 设置为  msgHashHex 或 msgHashBase64 查询
-  let msgHashHex = externalInMsgCell.hash().toString("hex");
-  let msgHashBase64 = externalInMsgCell.hash().toString("base64");
   console.info("msgHashHex = ", msgHashHex);
   console.info("msgHashBase64 = ", msgHashBase64);
   console.info("=========== External-In message end  =============");
