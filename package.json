@@ -1,0 +1,32 @@
+{
+  "name": "open-ton-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ton-builders/open-ton-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ton-builders/open-ton-api/issues"
+  },
+  "homepage": "https://github.com/ton-builders/open-ton-api#readme",
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^24.2.1",
+    "@types/node-fetch": "^2.6.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "debug": "^4.4.1",
+    "node-fetch": "^3.3.2"
+  }
+}

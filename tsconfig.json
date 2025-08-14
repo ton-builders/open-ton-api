@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2020",                 // 指定编译后的 JavaScript 版本
+    "module": "commonjs",               // 指定模块系统
+    "rootDir": "./src",                 // 指定源码文件夹,
+    "outDir": "./dist",                 // 指定编译后的文件夹
+    "esModuleInterop": true,            // 允许与 CommonJS 模块互操作
+    "strict": true,                     // 启用严格模式
+    "resolveJsonModule": true,          // 支持导入 JSON 文件
+    "skipLibCheck": true,                // 跳过对声明文件（.d.ts 文件）的类型检查，会检查到 node_modules 中，冲突风险高耗时长
+
+  },
+  "include": ["src"],                   // 指定需要编译的文件夹
+  "exclude": ["node_modules"]           // 指定需要排除的文件夹
+}
